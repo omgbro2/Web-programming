@@ -5,27 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OOOOGA BOOOOGA Data GUji</title><!--Web browser tab name at the very top-->
 
-    <h1><i>This is the 2nd page of the website. Very cool!</i></h1>
-
-    <button onclick="RedirectToHome()">Return to mainpage</button><!--The button that redirects-->
     <script>
     function RedirectToHome(){
         window.location.href = "/"; //redirect to Homepage
     }
     </script>
 
-    <!--colors and stuff-->
+    <!--colors & stuff-->
     <style>
-        body {background-color: white;}
-        h1 {color: black;}
-        button {color: aqua;}
+        body {
+            background-color: white;
+        }
+        h1 {
+            color: black;
+        }
+        button {
+            background-color: gray;
+            color: aqua;
+            margin-top: 20px;
+        }
     </style>
 
 </head>
 <body> <!--Main body of the website-->
+<h1><i>This is the 2nd page of the website. Very cool!</i></h1>
     <br>
-    <br>
+<button onclick="RedirectToHome()" style="margin-bottom: 100;">Return to mainpage</button><!--The button that redirects-->
     <p>Es nezinu ko just te liekas, bet jus izdomasiet</p>
+
+    <p><strong>Dogecoin Price:</strong> ${{ price }}</p>
+    <p><strong>24h Volume:</strong> ${{ volume_24h }}</p>
+    <p><strong>Market Cap:</strong> ${{ market_cap }}</p>
 
 
 </body>
