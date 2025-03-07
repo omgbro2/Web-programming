@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This is the homepage.</title><!--Web browser tab name at the very top-->
 
-    <h1>Welcome to the Main page of our website</h1>
+    <h1 style="font-size:60px;">What is DogeCoin?</h1>
 
-    <button onclick="RedirectToOther()">To other page</button><!--The button that redirects-->
+    <button onclick="RedirectToOther()">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8StV3g3dC93DxR-60uB_59Bqktpw5ZYQ6g&s" style="width:180px;height:180px;">
+    </button><!--The button that redirects-->
+    
     <script>
     function RedirectToOther(){
         window.location.href = "/Page_1"; //redirect to page 1
@@ -16,17 +19,39 @@
 
     <!--colors and stuff-->
     <style>
-        body {background-color: white;}
-        h1 {color: black;}
-        button {color: aqua;}
-        button {background-color: gray;}
-        .right-align {
-            text-align: right;
+        body {
+            background-color: white;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9LFQoSvd0u7wkvH6TxGEuK0TdDYzOtu2T8Q&s");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align:center;
+            font-family:sans-serif;
+        }
+        p {
+            color: rgb(255, 255, 255);
+            text-align:center;
+            font-family:sans-serif;
+        }
+        button {
+            color: rgb(0, 0, 0);
+            text-align:center;
+            margin: 0;
+            position: absolute;
+            top: 15%;
+            left: 90%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-family:sans-serif;
+        }
+
     </style>
 
 </head>
-<body> <!--Main body of the website-->
+<body>
     <br>
     <br>
     <p>[Insert text here]</p>
@@ -35,7 +60,7 @@
     <p>[Insert text here2]</p>
     <br>
     <br>
-    <p class="right-align">[Insert text here3]</p>
+    <p class="center-align">[Insert text here3]</p>
     <br>
     <br>
     <p style="margin-bottom: 100px;">[Insert text here4]</p>

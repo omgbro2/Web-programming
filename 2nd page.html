@@ -15,28 +15,55 @@
     <style>
         body {
             background-color: white;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9LFQoSvd0u7wkvH6TxGEuK0TdDYzOtu2T8Q&s");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
         h1 {
-            color: black;
+            color: rgb(255, 255, 255);
+            text-align:center;
+            font-family:sans-serif;
+        }
+        p {
+            color: rgb(255, 255, 255);
+            text-align:center;
+            font-family:sans-serif;
+            text-indent: 50px;
         }
         button {
-            background-color: gray;
-            color: aqua;
-            margin-top: 20px;
+            color: rgb(0, 0, 0);
+            text-align:center;
+            margin: 0;
+            position: absolute;
+            top: 15%;
+            left: 90%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
+
     </style>
 
 </head>
 <body> <!--Main body of the website-->
-<h1><i>This is the 2nd page of the website. Very cool!</i></h1>
+<p style="font-size:50px;"></p>
+    
+    <h1 style="font-size:60px;">DogeCoin information</h1>
     <br>
-<button onclick="RedirectToHome()" style="margin-bottom: 100;">Return to mainpage</button><!--The button that redirects-->
-    <p>Es nezinu ko just te liekas, bet jus izdomasiet</p>
 
+    <button onclick="RedirectToHome()">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8StV3g3dC93DxR-60uB_59Bqktpw5ZYQ6g&s" style="width:180px;height:180px;">
+    </button><!--The button that redirects-->
+
+    <p> </p>
+
+    <p> <img src="https://dogecoin.com/assets/images/doge.webp" style="width:500px;height:400px;" class="center"> </p>
+
+    <p style="font-size:30px;"><b>Data</p></b>
     <p><strong>Dogecoin Price:</strong> ${{ price }}</p>
     <p><strong>24h Volume:</strong> ${{ volume_24h }}</p>
     <p><strong>Market Cap:</strong> ${{ market_cap }}</p>
-
-
-</body>
+    
+    
+    </body>
 </html><!--Koda beigas-->
