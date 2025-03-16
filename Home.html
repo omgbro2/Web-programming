@@ -3,80 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is the homepage.</title><!--Web browser tab name at the very top-->
-
-    <h1 style="font-size:60px;">What is DogeCoin?</h1>
-
-    <button onclick="RedirectToOther()">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8StV3g3dC93DxR-60uB_59Bqktpw5ZYQ6g&s" style="width:180px;height:180px;">
-    </button><!--The button that redirects-->
-    
-    <script>
-    function RedirectToOther(){
-        window.location.href = "/Page_1"; //redirect to page 1
-    }
-    </script>
-
+    <title>DogeCoin</title><!--Web browser tab name at the very top-->
+    <link rel="icon" type="image/x-icon" href="https://dogecoin.com/assets/images/doge.svg">
     <!--colors and stuff-->
     <style>
-        body {
-            background-color: white;
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9LFQoSvd0u7wkvH6TxGEuK0TdDYzOtu2T8Q&s");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
+
+        html {
+        scroll-behavior: smooth;
         }
+        
+         body {
+            font-family:sans-serif;
+        }
+
+        #Video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 97%;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .text-content {
+            flex: 1;
+          
+            padding-right: 20px;
+        }
+        .image-content img {
+            width: 300px;
+            height: auto;
+        }
+
         h1 {
             color: rgb(255, 255, 255);
             text-align:center;
             font-family:sans-serif;
         }
+
         p {
             color: rgb(255, 255, 255);
             text-align:center;
             font-family:sans-serif;
         }
+
         button {
-            color: rgb(0, 0, 0);
-            text-align:center;
-            margin: 0;
+            background-color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
             position: absolute;
-            top: 15%;
+            top: 50%;
             left: 90%;
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            font-family:sans-serif;
+        }
+
+        button:hover {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .topnav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+        background-color: #333;
+        z-index: 1000;
+        }
+
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        .topnav a:hover {
+        background-color: #c98d00;
+        color: black;
+        }
+
+        .topnav a.active {
+        background-color: #c98d00;
+        color: black;
+        }
+
+        ul {
+        position: relative;
+        display: inline-block;
+        text-align: left;
+        margin: 0 auto;
+        padding-left: 20px;
+        }
+
+        ul li {
+        text-align: left;
+        }
+
+        hr {
+        height: 2px;
+        border-width:0;
+        background-color:#c98d00;    
         }
 
     </style>
 
 </head>
-<body>
-    <br>
-    <br>
-    <p>[Insert text here]</p>
-    <br>
-    <br>
-    <p>[Insert text here2]</p>
-    <br>
-    <br>
-    <p class="center-align">[Insert text here3]</p>
-    <br>
-    <br>
-    <p style="margin-bottom: 100px;">[Insert text here4]</p>
-    <br>
-    <br>
-    <p>[Insert text here5]</p>
-    <br>
-    <br>
-    <p>[Insert text here6]</p>
-    <br>
-    <br>
-    <p>[Insert text here7]</p>
-    <br>
-    <br>
-    <p>[Insert text here8]</p>
+<body id="C1">
+<video autoplay muted loop id="Video">
+        <source src="https://dogecoin.com/assets/images/Header_Video.mp4">
+</video>
 
+<div class="topnav">
+    <a class="active" href="#C1">Home</a>
+    <a href="#C2">Community</a>
+    <a href="#C3">How to buy</a>
+    <a href="#C4">The use</a>
+    <a href="#C5">Mining</a>
+    <a href="#C6">Predictions</a>
+  </div>
+
+    <div class="content">
+        <h1 style="font-size:60px;">This is Ðogecoin!</h1>
+        <button onclick="RedirectToOther()">
+            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Shyamli/Dogecoin.png" style="width:180px;height:180px;">
+    </button>
+    <br>
+    <br><br><br><br><br><br><br>
+    <br>
+            <h2>What really is "Dogecoin" ?</h2>
+            <p>Dogecoin (DOGE) is a decentralized, peer-to-peer cryptocurrency that was originally created as a joke in 2013 by software engineers Billy Markus and Jackson Palmer. Inspired by the popular "Doge" meme featuring a Shiba Inu dog, Dogecoin quickly gained a loyal following and developed into a legitimate digital currency.</p>
+            <p>Unlike Bitcoin, which has a limited supply, Dogecoin has an unlimited supply, making it ideal for microtransactions and tipping online content creators. It is known for its fast transaction speeds, low fees, and strong community support. Over the years, Dogecoin has been used for various charitable causes, crowdfunding campaigns, and even space exploration projects.</p>
+            <p id="C2">Backed by a passionate and humorous community, Dogecoin has evolved from an internet joke into a widely recognized cryptocurrency that is accepted by various merchants and traded on major exchanges. Whether you're using it for fun, payments, or investment, Dogecoin continues to prove that the crypto world can be both exciting and lighthearted.</p>
+        <div class="image-content">
+            <img src="https://dogecoin.com/assets/images/dogepedia/3.png">
+        </div>
+    <br>
+    <br>
+    <h2>The Dogecoin Community</h2>
+    <p>Dogecoin wouldn't be what it is today without its <strong>strong, enthusiastic community</strong>. The iconic <strong>Shiba Inu dog</strong> meme inspired millions of people to rally behind Dogecoin, making it one of the most active and lighthearted crypto communities.</p>
+    <p><strong>Notable Moments:</strong></p>
+    <ul>
+        <li><strong>Elon Musk's tweets</strong> have often caused Dogecoin's price to surge.</li>
+        <li>In 2014, the community raised <strong>$50,000 to send the Jamaican bobsled team to the Winter Olympics</strong>.</li>
+        <li>Dogecoin fans helped fund a <strong>NASA lunar satellite mission</strong>, literally sending DOGE to the moon!</li>
+    </ul>
+    <p id="C3">This fun, charitable, and supportive culture sets Dogecoin apart from other cryptocurrencies.</p>
+    <br>
+    <hr>
+    <br>
+    <h2>How to Buy and Store Dogecoin</h2>
+    
+    <h3>Buying Dogecoin</h3>
+    <ul>
+        <li><strong>Choose an exchange</strong> - Popular exchanges like <strong>Binance, Coinbase, and Kraken</strong> allow you to buy DOGE.</li>
+        <li><strong>Deposit funds</strong> - Use your credit card, PayPal, or bank transfer.</li>
+        <li><strong>Purchase DOGE</strong> - Simply search for <strong>Dogecoin (DOGE)</strong> and place an order.</li>
+    </ul>
+    
+    <h3>Storing Dogecoin</h3>
+    <p>After buying DOGE, you need a <strong>wallet</strong> to store it safely:</p>
+    <ul>
+        <li><strong>Software wallets:</strong> Trust Wallet, Atomic Wallet, or the official <strong>Dogecoin Wallet</strong>.</li>
+        <li><strong>Hardware wallets</strong> (for extra security): Ledger Nano X, Trezor.</li>
+    </ul>
+    <p id="C4">Never leave your Dogecoin on an exchange for long-term storage—<strong>always use a wallet</strong> to keep it safe!</p>
+    <br>
+    <hr>
+    <br>
+    <h2>Dogecoin Use Cases</h2>
+    <p>Despite its meme origins, Dogecoin is widely used for:</p>
+    <ul>
+        <li><strong>Tipping content creators</strong> on platforms like Reddit and Twitter.</li>
+        <li><strong>Payments</strong> - Some businesses accept Dogecoin for goods and services.</li>
+        <li><strong>Charity & Fundraising</strong> - Dogecoin has funded Olympic teams, water wells in Africa, and more.</li>
+        <li><strong>Trading & Investing</strong> - Many people trade DOGE on crypto markets.</li>
+    </ul>
+    <p id="C5">Major brands like <strong>Tesla</strong> (for select merchandise) and <strong>Dallas Mavericks</strong> (NBA team) have even embraced Dogecoin payments!</p>
+    <br>
+    <hr>
+    <br>
+    <h2>Mining Dogecoin</h2>
+    <p>Dogecoin mining is easier and cheaper than Bitcoin mining, making it accessible to more people.</p>
+    <h3>How It Works:</h3>
+    <p>Miners use computers to solve complex math problems, verifying transactions on the Dogecoin network. In return, they earn newly minted DOGE.</p>
+    <h3>Mining Options:</h3>
+    <ul>
+        <li><strong>Solo mining</strong> - Requires powerful equipment but lets you keep all rewards.</li>
+        <li><strong>Mining pools</strong> - Work with other miners and split rewards.</li>
+        <li><strong>Cloud mining</strong> - Rent mining power online instead of buying hardware.</li>
+    </ul>
+    <p id="C6">Popular mining software: <strong>CGMiner</strong>, <strong>EasyMiner</strong>, and <strong>MultiMiner</strong>.</p>
+    <br>
+    <hr>
+    <br>
+    <h2>Dogecoin Price Trends & Predictions</h2>
+    <p>Dogecoin's price history is full of wild swings, mainly driven by social media hype and celebrity endorsements.</p>
+    <h3>Notable Price Events:</h3>
+    <ul>
+        <li><strong>2021 Boom:</strong> Dogecoin surged from $0.01 to $0.70 due to Elon Musk's tweets and Reddit hype.</li>
+        <li><strong>Corrections:</strong> Prices have since fluctuated, following overall crypto market trends.</li>
+    </ul>
+    <h3>Future Predictions:</h3>
+    <ul>
+        <li>Some experts believe Dogecoin could hit <strong>$1</strong> if adoption increases.</li>
+        <li>Others argue its <strong>unlimited supply</strong> keeps its value lower than Bitcoin.</li>
+    </ul>
+    <p>Still, Dogecoin remains one of the most actively traded cryptocurrencies!</p>
+    <p>While DOGE may be volatile, its strong community and ongoing use cases keep it relevant.</p>
+    <br>
+    <br>
+</div>
+
+<script>
+    function RedirectToOther(){
+        window.location.href = "/Page_1"; //redirect to page 1
+    }
+    </script>
 
 </body>
 </html><!--Koda beigas-->
