@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"><!--Koda sākums-->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OOOOGA BOOOOGA Data GUji</title><!--Web browser tab name at the very top-->
+    <title>DogeCoin</title>
+    <link rel="icon" type="image/x-icon" href="https://dogecoin.com/assets/images/doge.svg">
 
     <script>
     function RedirectToHome(){
@@ -11,14 +12,13 @@
     }
     </script>
 
-    <!--colors & stuff-->
     <style>
+        html {
+        scroll-behavior: smooth;
+        }
+        
         body {
-            background-color: white;
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9LFQoSvd0u7wkvH6TxGEuK0TdDYzOtu2T8Q&s");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
+            font-family:sans-serif;
         }
         h1 {
             color: rgb(255, 255, 255);
@@ -32,38 +32,145 @@
             text-indent: 50px;
         }
         button {
-            color: rgb(0, 0, 0);
-            text-align:center;
-            margin: 0;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            cursor: pointer;
             position: absolute;
-            top: 15%;
+            top: 50%;
             left: 90%;
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+        }
+        #Video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1;
+        }
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        hr {
+            height: 2px;
+            border-width:0;
+            background-color:#c98d00;    
+        }
+        table{
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            text-align: left;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+        }
+        th{
+            padding: 15px;
+            border-bottom: 3px solid white;
+            font-size: 26px;
+        }
+        .td{
+            padding: 15px;
+            border-bottom: 2px solid white;
+        }
+        ul {
+            position: relative;
+            display: inline-block;
+            text-align: left;
+            margin: 0 auto;
+            padding-left: 20px;
+        }
+
+        ul li {
+            text-align: left;
+        }
+        .textbackground{
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 70%;
+            margin: auto;
+        }
+        .buttontext{
+            text-align: center;
+            font-size: 10px;
+            color: white;
+            font-style: italic;
+            transform: translate(-15%, 0);
         }
 
     </style>
 
 </head>
-<body> <!--Main body of the website-->
-<p style="font-size:50px;"></p>
-    
+<body>
+<video autoplay muted loop id="Video">
+        <source src="https://dogecoin.com/assets/images/Header_Video.mp4">
+</video>
+
     <h1 style="font-size:60px;">DogeCoin information</h1>
     <br>
 
     <button onclick="RedirectToHome()">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8StV3g3dC93DxR-60uB_59Bqktpw5ZYQ6g&s" style="width:180px;height:180px;">
-    </button><!--The button that redirects-->
+        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Shyamli/Dogecoin.png" style="width:180px;height:180px;">
+        <div class="textbackground">
+            <p class="buttontext">Try pressing the <strong style="font-size:12px">DogeCoin</strong></p>
+        </div>
+    </button>
 
-    <p> </p>
+        <p> <img src="https://dogecoin.com/assets/images/doge.webp" style="width:500px;height:400px;" class="image"> </p>
 
-    <p> <img src="https://dogecoin.com/assets/images/doge.webp" style="width:500px;height:400px;" class="center"> </p>
+        <br><br>
 
-    <p style="font-size:30px;"><b>Data</p></b>
-    <p><strong>Dogecoin Price:</strong> ${{ price }}</p>
-    <p><strong>24h Volume:</strong> ${{ volume_24h }}</p>
-    <p><strong>Market Cap:</strong> ${{ market_cap }}</p>
+    <p style="font-size:30px;"><b>Market Data</p></b>
     
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td class="td"><strong>Dogecoin Price:</strong></td>
+            <td class="td">${{ price }}</td>
+        </tr>
+        <tr>
+            <td class="td"><strong>24h Volume:</strong></td>
+            <td class="td">${{ volume_24h }}</td>
+        </tr>
+        <tr>
+            <td style="padding: 15px;"><strong>Market Cap:</strong></td>
+            <td style="padding: 15px;">${{ market_cap }}</td>
+        </tr>
+    </table>
     
-    </body>
-</html><!--Koda beigas-->
+<br><br><br>
+
+<div class="textbackground">
+    <h2>Understanding The Table of Dogecoin Market Data</h2>
+<ul>
+    <p>The table above provides key insights into the current state of Dogecoin's market performance.</p>
+    
+    <li><strong>Dogecoin Price:</strong> This represents the latest price of Dogecoin in USD. The price of Dogecoin is highly volatile and can change rapidly based on market demand, trading volume, and overall sentiment.</li>
+    <br>
+    <li><strong>24h Volume:</strong> This is the total trading volume of Dogecoin in the last 24 hours. A high volume indicates strong market activity, while a lower volume suggests reduced interest in trading.</li>
+    <br>
+    <li><strong>Market Cap:</strong> The market capitalization of Dogecoin is calculated by multiplying the total circulating supply by the current price. A higher market cap means Dogecoin has a larger presence in the crypto market.</li>
+
+    <p>Keeping track of these metrics can help you make informed decisions about buying, selling, or holding Dogecoin. Stay updated with real-time data to navigate the ever-changing cryptocurrency landscape.</p>
+</ul>
+</div>
+
+<br><br><br><hr>
+</body>
+</html>
