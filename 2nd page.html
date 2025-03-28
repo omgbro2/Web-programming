@@ -50,7 +50,7 @@
         cursor: pointer;
         border-radius: 15px;
         display: block;
-        margin: 20px auto; /* Centrē pogu */ 
+        margin: 20px auto; /* Centers the button */
         text-align: center;
         }
         .download-button:hover {
@@ -126,18 +126,21 @@
             transform: translate(-15%, 0);
         }
         a {
-            text-decoration: none;
+        text-decoration: none;
         }
         ::-webkit-scrollbar {
-            width: 12px;
+        width: 12px;
         }
+
         ::-webkit-scrollbar-track {
             background: #1e1e1e; 
         }
+
         ::-webkit-scrollbar-thumb {
             background: #c98d00;
             border-radius: 6px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #946a09;
         }
@@ -209,6 +212,58 @@
     <p>Keeping track of these metrics can help you make informed decisions about buying, selling, or holding Dogecoin. Stay updated with real-time data to navigate the ever-changing cryptocurrency landscape.</p>
 </ul>
 </div>
+
+<br><br><br>
+<div class="textbackground">
+    <h2>Dogecoin Trading Volume Comparison</h2>
+    <p>24-hour trading volume across major exchanges:</p>
+    <img src="/dogecoin_volume_histogram.png?t=<?= time() ?>" 
+         alt="Dogecoin Volume Comparison" 
+         style="width:100%; max-width:1000px; display:block; margin:0 auto;"
+         onerror="this.onerror=null;this.src='';this.parentNode.innerHTML+='<p style=\'color:red\'>Failed to load volume data. Please try refreshing.</p>'">
+    <p>This comparison shows trading activity for Dogecoin across different platforms.</p>
+</div>
+
+<div class="textbackground">
+    <h2>Dogecoin Price History</h2>
+    <div class="time-buttons">
+        <button onclick="updateChart('hour')">Last Hour</button>
+        <button onclick="updateChart('day')">Last Day</button>
+        <button onclick="updateChart('week')">Last Week</button>
+        <button onclick="updateChart('month')">Last Month</button>
+        <button onclick="updateChart('year')">Last Year</button>
+    </div>
+    <img id="priceChart" src="/dogecoin_price_chart.png?range=week" 
+         alt="Dogecoin Price Chart"
+         style="width:100%; max-width:1000px; display:block; margin:0 auto;">
+</div>
+
+<script>
+function updateChart(range) {
+    const img = document.getElementById('priceChart');
+    img.src = `/dogecoin_price_chart.png?range=${range}&t=${new Date().getTime()}`;
+}
+</script>
+
+<style>
+.time-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+.time-buttons button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.time-buttons button:hover {
+    background-color: #c98d00;
+}
+</style>
 
 <br><br><br><hr>
 </body>
