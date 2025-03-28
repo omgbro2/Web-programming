@@ -144,7 +144,23 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #946a09;
         }
-
+        .time-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .time-buttons button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .time-buttons button:hover {
+            background-color: #c98d00;
+        }
     </style>
 
 </head>
@@ -244,26 +260,6 @@ function updateChart(range) {
     img.src = `/dogecoin_price_chart.png?range=${range}&t=${new Date().getTime()}`;
 }
 </script>
-
-<style>
-.time-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 15px 0;
-}
-.time-buttons button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.time-buttons button:hover {
-    background-color: #c98d00;
-}
-</style>
 
 <br><br><br><hr>
 </body>
