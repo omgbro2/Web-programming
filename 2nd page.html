@@ -31,15 +31,33 @@
             font-family:sans-serif;
             text-indent: 50px;
         }
-        button {
-            background-color: rgba(0, 0, 0, 0);
-            border: none;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            left: 90%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+        .home-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(0, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        }
+        .download-button {
+        background-color: #333;
+        color: white;
+        font-size: 24px;
+        border: none;
+        padding: 20px 40px;
+        cursor: pointer;
+        border-radius: 15px;
+        display: block;
+        margin: 20px auto; /* Centrē pogu */ 
+        text-align: center;
+        }
+        .download-button:hover {
+        background-color: #c98d00;
         }
         #Video {
             position: fixed;
@@ -122,7 +140,7 @@
     <h1 style="font-size:60px;">DogeCoin information</h1>
     <br>
 
-    <button onclick="RedirectToHome()">
+    <button class="home-button" onclick="RedirectToHome()">
         <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Shyamli/Dogecoin.png" style="width:180px;height:180px;">
         <div class="textbackground">
             <p class="buttontext">Try pressing the <strong style="font-size:12px">DogeCoin</strong></p>
@@ -154,6 +172,14 @@
         </tr>
     </table>
     
+<br><br><br>
+
+<p class="textbackground" style="font-size:26px;"><strong>Download CSV of up to 50 crypto currencies!</strong></p>
+
+<a href="/download_csv">
+    <button class="download-button">Download</button>
+</a>
+
 <br><br><br>
 
 <div class="textbackground">
