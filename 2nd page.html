@@ -13,9 +13,6 @@
     </script>
 
     <style>
-        html {
-        scroll-behavior: smooth;
-        }
         
         body {
             font-family:sans-serif;
@@ -129,7 +126,20 @@
             transform: translate(-15%, 0);
         }
         a {
-        text-decoration: none;
+            text-decoration: none;
+        }
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e1e1e; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c98d00;
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #946a09;
         }
 
     </style>
